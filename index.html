@@ -43,7 +43,7 @@
                 <div class="row   py-3 mb-3 timer-box  ">
                     <div class="col-12 timer-count ">
                         <h5> Timer:</h5>
-                        <p id="demo"></p>
+                        <p id="timer"></p>
                     </div>
                 </div>
                 <div class="row px-2  mb-3 dashboard-box">
@@ -65,13 +65,13 @@
                 <div class="rov">
                     <div class="col-12">
                         <section class="memory-game ">
-                            <div class="memory-card" data-framework="loki">
-                                <img src=" img/loki_avengers-e1471093009466.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="asta">
+                                <img src="assets/image/asta.jpg" alt="react" class="front-face">
+                                <img src="assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="loki">
-                                <img src=" img/loki_avengers-e1471093009466.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="asta">
+                                <img src="assets/image/asta.jpg" alt="react" class="front-face">
+                                <img src="assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
                             <div class="memory-card" data-framework="redskull">
                                 <img src=" img/red skull.jpg" alt="react" class="front-face">
@@ -127,28 +127,8 @@
 
     </div>
     
-    <div> 
-        Time Left :: 
-        <input id="minutes" type="text" style="width: 10px; 
-             border: none; font-size: 16px;  
-            font-weight: bold; color: black;"><font size="5"> : 
-                        </font> 
-        <input id="seconds" type="text" style="width: 20px; 
-                        border: none; font-size: 16px; 
-                        font-weight: bold; color: black;"> 
-    </div> 
-    
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-  Launch demo modal
-</button>
-
- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
-  Launch demo modal
-</button>
+   
+  
 
     </main>
 
@@ -201,24 +181,28 @@
 </div>
 
   
-<!--lose modal-->
 
-<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="lose-modal">
-                <div class="row">
-                    <div class="col-12">
-                        <h3> Out of time !</h3>
-                        <p> you lose! </p>
+  <!--lose modal-->
+
+    <div class="modal fade" id="lose-model" tabindex="-1" role="dialog" aria-labelledby="lose-model" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="lose-modal">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3> Out of time !</h3>
+                            <p> you lose! </p>
+                            <button type="button" id="reset" class="btn btn-warning  mx-auto">Reset</button>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+    </div>
   
+
 <!--how-to-play modal-->
 
 <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
@@ -246,7 +230,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="game-script.js">
+    <script type="text/javascript" src="assets/js/game-script.js">
     </script>
 
 </body>

@@ -1,0 +1,132 @@
+$(document).ready(function() {
+ 	$("#reset-btn").on("click", function() {
+ 		$(".memory-card").removeClass('flip');
+		
+	});
+	
+	$("h1").on("click", function() {
+ 	checkTime();
+		
+		
+	});
+
+ 	
+
+}); 
+
+
+
+
+
+
+
+
+//variables 
+
+const cards = document.querySelectorAll(".memory-card");
+/*So here ive created a variable called cards and initialised it as (defined it as )
+the element with .memory-card so cards is now reopresenting .memory-card. 
+querySelectorAll i assume means all elements that contain the ".memory-card class */
+
+/*once you get up to the point where you are adding " lockBoard "  you'll notice some bugs when you click another set of cardd before 
+the first two have finished flipping it crashes our logic so you must lock the board when two cards flip
+*/
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipcard() { // flipcard is the function name. 
+
+if(lockBoard) return;
+if(this === firstCard) return; // when you double click theres still a bug  
+
+    this.classList.add("flip");
+
+    if (!hasFlippedCard) {
+        //first click
+        hasFlippedCard = true;
+        firstCard = this; /*The this keyword represents in this context the element that fires the function 
+        in this case its the .memory card element. So memory-card becomes first-card temporarily */
+        return;
+        
+    }
+   
+        //second click
+        /* hasFlippedCard = false; */ // once resetBoard() is created <-- you no longer need this syntax 
+        secondCard = this;
+        
+        checkForMatch()
+    }
+/* At the begining before any card is clicked, hasFlippedCard is false so when you click a card the if statement is correct because
+hasFlippedCard is false and the if statements first condition requires this to be the case, the if code is executed as a result 
+and hasFlippedCard becomes true. Next the second card clicked will trigger the else code because  hasFlippedCard is true so the 
+if code isnt executed This becomes the secondCard */
+
+
+    //   console.log("I was clicked!"); /* This prints out the inputted value on the console when you click "inspect". 
+    // The point of this is to test whether the function is working.  */
+    // console.log(this);//"this" key word represents the element that fiered the event in this case that is the div containing the .memory-card class
+
+  /* This is an event listener. It 
+will watch out for whatever action you specify and then when that condition is met it will execute a function 
+in htis case the action is beiung listened foe is a "click " and the function that wil be executed is "flipcard
+" */
+
+// To sumerise:
+/* "cards" is defined as all elements with ".memory-card" 
+Next, for each cards or for each element with the .memory-cards class add an eventListener that watches out for a click.
+in other words when an element with ".memory-cards" is clicked execute function "flip-card"
+in the function "flipcard" a msg is printed into the console log 
+*/
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.framework ===  
+            secondCard.dataset.framework;
+            
+            isMatch ? disableCards() : unflipCards();// <- This is a ternery operator which allow you to write an if else statement in one line.
+    // ternery operator = condition? expr1 (if true) : expr2 (if false)
+        /*if () {
+            // Cards match!!
+           disableCards();
+        }
+        else {
+            //no match :(
+          unflipCards(); 
+        } */
+}
+
+function disableCards(){
+     firstCard.removeEventListener("click", flipcard);
+            secondCard.removeEventListener("click", flipcard);
+            
+             resetBoard();
+}
+
+function unflipCards() {
+    lockBoard = true;
+    
+     setTimeout(() =>{ // setTime delays the execution of the else code
+                firstCard.classList.remove("flip")
+            secondCard.classList.remove("flip")
+            
+         resetBoard();
+     }, 1500);
+            
+            /* lockBoard = false; */ // no longer need this because of of resetBoard()
+    
+}
+
+function resetBoard() {
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+}
+
+
+(function shuffle() {
+    cards.forEach( card => {let randomPos = Math.floor(Math.random() * 12);
+     card.style.order = randomPos;   
+    });
+})(); //wrapping function like this makes it an immidiately invoked Function Expression which means this function is executed after definition 
+cards.forEach(card => card.addEventListener("click", flipcard));
