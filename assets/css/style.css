@@ -1,0 +1,320 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+
+}
+
+
+/***************************
+container/box settings 
+******************************/
+
+.row {
+    border: solid 2px green;
+    height: auto;
+}
+
+.btn {
+    width: 90px;
+}
+
+.shounen-game-container {
+    min-height: 100vh;
+    padding: 0 15px 5px;
+    background-color: pink;
+    border: solid 2px red;
+}
+
+.dashboard-container {
+    background-color: blue;
+    min-height: 100vh;
+}
+
+.game-board-container {
+    background-color: red;
+
+
+}
+
+
+.name-container {
+    width: 150px;
+}
+
+.score-container {
+    width: 150px;
+}
+
+.high-score-container {
+    width: 150px;
+}
+
+.title-box {
+
+    height: 60px;
+    width: 312px;
+
+    background-color: orange;
+}
+
+.dashboard-box {
+    height: 100px;
+    width: 312px;
+    border: solid 2px blue;
+    background-color: yellow;
+}
+
+
+.timer-box {
+    height: 60px;
+    width: 312px;
+    background-color: green;
+    border: solid 2px blue;
+}
+
+.timer-count  {
+  display: flex;
+    }
+
+.timer-count h5  {
+   margin-right:10px; 
+    }
+
+
+.turn-box {
+    height: 60px;
+    border: solid 2px blue;
+    background-color: green;
+}
+
+
+
+/***************************
+ modal
+******************************/
+
+form {
+    margin: auto;
+}
+
+
+
+
+.btn-win {
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border: solid 2px blue;
+}
+
+.name-modal,
+.win-modal,
+.modal-content {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background-color: orange;
+}
+
+.name-modal .how-to-play-modal h3 {
+
+    text-align: center;
+    margin-top: 30px;
+    background-color: orange;
+}
+
+.win-modal h3 {
+    margin:140px 0 ;
+    text-align: center;
+}
+
+.lose-modal h3 {
+    margin-top:140px  ;
+    text-align: center;
+}
+
+.lose-modal p {
+    margin-bottom:140px;
+    text-align: center;
+    font-size:25px;
+}
+/***************************
+ 
+******************************/
+
+/* Memory game: game container code */
+
+.memory-game {
+    width: 280px;
+    height: 350px;
+    margin: auto;
+    /*This is meant to centre the game board but to noavail */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex has default property of "nowrap" */
+    perspective: 1000px;
+    border: 2px solid lime;
+}
+
+.memory-card {
+    padding-bottom: 20px;
+    width: calc(25% - 10px);
+    /* This makes it so theres four cards in a row and calc makes it so that the excess margin 
+          is  considered in the width */
+    height: calc(33.333% - 10px);
+    /* This makes it so there's 3 rows */
+    margin: 5px;
+    position: relative;
+    /* When you set an elemment to positon relative nothimg will happen, but when you add apply position
+          attributes like top:10px or left:10px then the elemnt will position itself relative to its normal positon in flow e.g it will move 
+          20px right and 20px down from its normal position */
+    transform: scale(1);
+    transform-style: preserve-3d;
+    /* This + perspective property and transition:transform makes the card flip 3d */
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    /* suedo class active makes it so that when an element is clicked trigger an animation
+          the element will become 3% smaller when clicked*/
+    transition: transform .2s;
+
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+    /*rotates image on y axis. as if you were turing a revolving door */
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    /* This makes it so the imgs take on 100% of the container width */
+    height: 100%;
+    /* This makes it so the imgs take on 100% of the container height */
+    position: absolute;
+    /* When you add postion absolute  the element has to position its self relative to its nearest  ancestor 
+         if this cant be done then its positions itself relative to the body elemnent */
+    border-radius: 5px;
+    background: #1c7ccc;
+    backface-visibility: hidden;
+    /*eaxh html element has a backface this must be set to hidden so when you flip a card
+            its backface isnt shown */
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+
+/***************************
+media queries 
+******************************/
+
+/*--phones --*/
+
+@media (max-width:414px) {
+    .title-box {
+        margin: auto;
+    }
+
+    .dashboard-box {
+        /*this is to fix positioning problems with the dashboard */
+        margin: auto;
+    }
+
+
+    .timer-box {
+        /*this is to fix positioning problems with the timer box*/
+        margin: auto;
+    }
+}
+
+
+@media (min-width:375px) {
+    .memory-game {
+        /*this is to fix positioning problems with the card box */
+        width: 330px;
+    }
+
+    h5 {
+        font-size: 20px;
+        margin: 0;
+
+    }
+}
+
+
+/*--ipad--*/
+
+@media (min-width:767px) {
+
+
+
+    h5 {
+        font-size: 15px;
+
+    }
+}
+
+
+
+/* --desktop screens--- */
+
+@media (min-width:992px) {
+
+    .btn {
+        width: 90px;
+        font-size: 20px;
+    }
+
+
+    h5 {
+        font-size: 20px;
+
+    }
+
+    .title-box {
+        width: 350px;
+        height: 80px;
+        margin: auto;
+    }
+
+    .dashboard-box {
+        /*this is to fix positioning problems*/
+        width: 350px;
+        height: 120px;
+
+        margin: auto;
+    }
+
+
+    .timer-box {
+        /*this is to fix positioning problems*/
+        width: 350px;
+
+        margin: auto;
+    }
+
+    .turn-box {
+        width: 350px;
+
+        margin: auto;
+    }
+
+    .dashboard-padding {
+        padding-top: 5px;
+    }
+
+
+    .memory-game {
+        height: 680px;
+        width: 500px;
+    }
+
+}

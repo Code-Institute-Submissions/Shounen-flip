@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title> Memory game</title>
+
+
+
+</head>
+
+<body>
+    <div class="shounen-game-container container-fluid">
+        <div class="row ">
+
+            <div class="col-12 col-md-5 order-md-2 dashboard-container ">
+                <div class="row mb-3  title-box  ">
+                    <div class="col-12 ">
+                        <h1>Shonen flip!</h1>
+                    </div>
+                </div>
+                <div class="row   mb-3 ">
+                    <div class="col-12">
+                        <div class="row dashboard-box ">
+                            <div class="col-12 my-1 name-container">
+                                <h5>name:</h5>
+                            </div>
+                            <div class="col-12 my-1 score-container ">
+                                <h5>score:</h5>
+                            </div>
+                            <div class="col-12 my-1 high-score-container ">
+                                <h5>high-score:</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row   py-3 mb-3 timer-box  ">
+                    <div class="col-12 timer-count ">
+                        <h5> Timer:</h5>
+                        <p id="demo"></p>
+                    </div>
+                </div>
+                <div class="row px-2  mb-3 dashboard-box">
+                    <div class="col-12 dashboard-padding ">
+                        <div class="row mt-1 justify-content-center">
+                            <button type="button" class="btn btn-warning mx-auto">Easy</button>
+                            <button type="button" class="btn btn-warning mx-auto">Meduim</button>
+                            <button type="button" class="btn btn-warning mx-auto">Shonen!</button>
+                        </div>
+                        <div class="row mt-1 justify-content-center">
+                            <button type="button" class="btn btn-warning mx-auto" data-toggle="modal" data-target="#exampleModal4">Rules</button>
+                            <button type="button" class="btn btn-warning mx-auto">Mute</button>
+                            <button type="button" id="reset-btn" class="btn btn-warning  mx-auto">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 order-md-1 container game-board-container ">
+                <div class="rov">
+                    <div class="col-12">
+                    </div>
+                </div>
+                <div class="row p-3 my-3 turn-box  ">
+                    <div class="col-12 ">
+                        <h3 >Turn:</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div> 
+        Time Left :: 
+        <input id="minutes" type="text" style="width: 10px; 
+             border: none; font-size: 16px;  
+            font-weight: bold; color: black;"><font size="5"> : 
+                        </font> 
+        <input id="seconds" type="text" style="width: 20px; 
+                        border: none; font-size: 16px; 
+                        font-weight: bold; color: black;"> 
+    </div> 
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+  Launch demo modal
+</button>
+
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+  Launch demo modal
+</button>
+
+    </main>
+
+
+
+
+    <!--Modal section-->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="name-modal">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>whats your name ?</h3>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="name" class="form-control" id="userinputname">
+                        </div>
+
+                        <button type="submit" class="btn-win  ">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--win modal-->
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="win-modal">
+                <div class="row">
+                    <div class="col-12">
+                        <h3> you win! </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+  
+<!--lose modal-->
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="lose-modal">
+                <div class="row">
+                    <div class="col-12">
+                        <h3> Out of time !</h3>
+                        <p> you lose! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+  
+<!--how-to-play modal-->
+
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="how-to-play-modal">
+                <div class="row">
+                    <div class="col-12">
+                        <h3> How to play </h3>
+                        <p> match </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="game-script.js">
+    </script>
+
+</body>
+
+</html>
