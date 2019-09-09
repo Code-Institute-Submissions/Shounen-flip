@@ -6,12 +6,6 @@ $(document).ready(function() {
 });
 
 
-
-
-
-
-
-
 //variables 
 
 
