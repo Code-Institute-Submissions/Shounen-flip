@@ -16,52 +16,49 @@
 </head>
 
 <body>
-    <div class="shounen-game-container container-fluid">
+    <div class="shounen-game-container shonen-bg container-fluid">
         <div class="row ">
 
             <div class="col-12 col-md-5 order-md-2 dashboard-container ">
-                <div class="row mb-3  title-box  ">
+                <div class="row mt-5  title-box  ">
                     <div class="col-12 ">
-                        <h1>Shonen flip!</h1>
+                        <h1>Shounen flip!</h1>
                     </div>
                 </div>
-                <div class="row   mb-3 ">
+                <!-- i changed the margin of the row to mt-3 i basically wanted to move the three boxes on the right down -->
+               <!-- I got rid of name because of time see readme for explaination --> 
+                <div class="row   mt-3 ">
                     <div class="col-12">
                         <div class="row dashboard-box ">
-                            <div class="col-12 my-1 name-container">
-                                <h5>name:</h5>
-                            </div>
                             <div class="col-12 my-1 score-container ">
-                                <h5>score:</h5>
+                                <h5 id="rank">Rank: </h5>
                             </div>
-                            <div class="col-12 my-1 high-score-container ">
-                                <h5>high-score:</h5>
+                            <div class="col-12 pt-0   ">
+                                <!-- deleted p element-->
+                                <h5 id="counter">Turns: </h5>
                             </div>
+
+                            <div class="col-12 my-1  timer-count ">
+                                <h5 class="p-0" id="timer">Time:</h5>
+                            </div>
+
+                            <!--changes to commit added "rank" and got rid of high score -->
                         </div>
                     </div>
                 </div>
-                <div class="row   py-3 mb-3 timer-box  ">
-                    <div class="col-12 timer-count ">
-                        <h5> Timer:</h5>
-                        <p id="timer"></p>
-                    </div>
-                </div>
-                <div class="row px-2  mb-3 dashboard-box">
-                    <div class="col-12 dashboard-padding ">
-                        <div class="row mt-1 justify-content-center">
-                            <button type="button" class="btn btn-warning mx-auto">Easy</button>
-                            <button type="button" class="btn btn-warning mx-auto">Meduim</button>
-                            <button type="button" class="btn btn-warning mx-auto">Shonen!</button>
-                        </div>
-                        <div class="row mt-1 justify-content-center">
+                <!--delete this timer box 
+                -->
+                <!-- commit delete 4 buttons  on dashboard just left with rules and reset. -->
+                <div class="row px-2  mt-3  ">
+                    <div class="col-12 ">
+                        <div class="row rule_reset-box   mt-1 justify-content-center">
                             <button type="button" class="btn btn-warning mx-auto" data-toggle="modal" data-target="#exampleModal4">Rules</button>
-                            <button type="button" class="btn btn-warning mx-auto">Mute</button>
                             <button type="button" id="reset-btn" class="btn btn-warning  mx-auto">Reset</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-7 order-md-1 container game-board-container ">
+            <div class="col-12 col-md-7 order-md-1 container game-board-container  ">
                 <div class="rov">
                     <div class="col-12">
                         <section class="memory-game ">
@@ -73,62 +70,57 @@
                                 <img src="assets/image/asta.jpg" alt="react" class="front-face">
                                 <img src="assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="redskull">
-                                <img src=" img/red skull.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="tanjirou">
+                                <img src="assets/image/Tanjirou.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="redskull">
-                                <img src=" img/red skull.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="tanjirou">
+                                <img src="assets/image/Tanjirou.png  " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="ultron">
-                                <img src=" img/ultron_prime.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="deku">
+                                <img src="assets/image/deku.jpg " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="ultron">
-                                <img src=" img/ultron_prime.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="deku">
+                                <img src="assets/image/deku.jpg " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="thanos">
-                                <img src=" img/thanos.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="goku">
+                                <img src="assets/image/goku.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="thanos">
-                                <img src=" img/thanos.jpg" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="goku">
+                                <img src="assets/image/goku.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="aurelia">
-                                <img src=" img/2.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="ichigo">
+                                <img src="assets/image/Ichigo.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="aurelia">
-                                <img src=" img/2.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="ichigo">
+                                <img src="assets/image/Ichigo.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="yellow">
-                                <img src=" img/1.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="naruto">
+                                <img src="assets/image/naruto.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
-                            <div class="memory-card" data-framework="yellow">
-                                <img src=" img/1.png" alt="react" class="front-face">
-                                <img src=" img/Avengers-logo.jpg" alt="react" class="back-face">
+                            <div class="memory-card" data-framework="naruto">
+                                <img src="assets/image/naruto.png " alt="react" class="front-face">
+                                <img src=" assets/image/shonen jump.jpg" alt="react" class="back-face">
                             </div>
                         </section>
                     </div>
                 </div>
-                <div class="row p-3 my-3 turn-box  ">
-                    <div class="col-12 ">
-                        <h3 >Turn:</h3>
-                    </div>
-                </div>
+                <!-- moved turn div to dashboard -->
 
             </div>
         </div>
-
     </div>
-    
-   
-  
+
+
+
 
     </main>
 
@@ -136,90 +128,48 @@
 
 
     <!--Modal section-->
+<!--deleted name modal because of time -->
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="name-modal">
-                <div class="row">
-                    <div class="col-12">
-                        <h3>whats your name ?</h3>
-                    </div>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">name</label>
-                            <input type="name" class="form-control" id="userinputname">
-                        </div>
 
-                        <button type="submit" class="btn-win  ">Submit</button>
 
-                    </form>
-                </div>
+    <!--win modal-->
+    <div class="bg-win-modal ">
+        <div class="modal-content win-bg">
+            <div class="close">+</div>
+            <h2>You win !</h2>
+
+            <div class="modal-score-container">
+                <div id="finalRankScore" class="win-modal-scores"></div>
+                <div id="finalTimeScore" class="win-modal-scores">Time: </div>
+                <div id="finalMovesScore" class="win-modal-scores"></div>
+                <button id="win-modal-reset-btn" class="btn btn-warning  mx-auto">Reset</button>
+
             </div>
         </div>
     </div>
-</div>
-</div>
 
 
-<!--win modal-->
 
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="win-modal">
-                <div class="row">
-                    <div class="col-12">
-                        <h3> you win! </h3>
-                    </div>
-                </div>
+
+    <!--lose modal-->
+
+
+    <div class="bg-lose-modal">
+        <div class="modal-content  lose-bg">
+            <div class="close">+</div>
+            <h2> You lose! </h2>
+            <div class="modal-score-container">
+                <p> * Banished to the shadow realm! * </p>
+
+                <button id="lose-modal-reset-btn" class="btn btn-warning  mx-auto"> Try again </button>
             </div>
         </div>
     </div>
-</div>
-</div>
 
-  
+    <!--how-to-play modal-->
 
-  <!--lose modal-->
 
-    <div class="modal fade" id="lose-model" tabindex="-1" role="dialog" aria-labelledby="lose-model" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="lose-modal">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3> Out of time !</h3>
-                            <p> you lose! </p>
-                            <button type="button" id="reset" class="btn btn-warning  mx-auto">Reset</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-  
-
-<!--how-to-play modal-->
-
-<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="how-to-play-modal">
-                <div class="row">
-                    <div class="col-12">
-                        <h3> How to play </h3>
-                        <p> match </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 
 

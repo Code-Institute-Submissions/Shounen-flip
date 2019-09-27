@@ -5,6 +5,33 @@ body {
     font-family: 'Bangers', cursive;
 
 }
+/***************************
+shonen background  settings 
+******************************/
+/* commit */  
+.shonen-bg {
+    background: url("../image/shonen-bg.jpg") no-repeat fixed center;
+    -webkit-background-size:cover ;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    }
+
+
+.win-bg {
+    background: url("../image/victory.jpg") no-repeat fixed center;
+    background-size: 600px 300px;    
+-webkit-background-size: 600px 300px;
+    -moz-background-size: 600px 300px;
+    -o-background-size: 600px 300px;  
+}
+
+.lose-bg {
+    background: url("../image/kaiba-defeat.jpg") no-repeat fixed center;
+    background-size: 600px 300px;    
+-webkit-background-size: 600px 300px;
+    -moz-background-size: 600px 300px;
+    -o-background-size: 600px 300px;  
+}
 
 
 /***************************
@@ -12,7 +39,7 @@ container/box settings
 ******************************/
 
 .row {
-    border: solid 2px green;
+   /* commit */
     height: auto;
 }
 
@@ -23,17 +50,18 @@ container/box settings
 .shounen-game-container {
     min-height: 100vh;
     padding: 0 15px 5px;
-    background-color: pink;
-    border: solid 2px red;
+   /* delete the bg colors here and also i pput shonen 
+   bg class in the shounen container. */
 }
-
+/* commit */
 .dashboard-container {
-    background-color: blue;
-    min-height: 100vh;
+    background-color: #a90329;
+ background-image: radial-gradient( #000000 15%, #a90329 );
+     min-height: 100vh;
 }
 
 .game-board-container {
-    background-color: red;
+    background-color: ;
 
 
 }
@@ -50,99 +78,141 @@ container/box settings
 .high-score-container {
     width: 150px;
 }
-
+/* commit*/
 .title-box {
 
     height: 60px;
     width: 312px;
-
+    margin: auto;
+   text-align: center; 
     background-color: orange;
+    -webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: #fff;
 }
 
 .dashboard-box {
-    height: 100px;
+    height: 170px;
     width: 312px;
-    border: solid 2px blue;
-    background-color: yellow;
+   margin: auto;
+    background-color: orange;
+    -webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #fff;
 }
 
 
-.timer-box {
+.dashboard-box h5 {
+    font-size: 15px;
+}
+/* timer box class chanagd to rue_reset box */
+
+.rule_reset-box {
     height: 60px;
-    width: 312px;
-    background-color: green;
-    border: solid 2px blue;
+    width: 350px;
+    margin: auto;
+    padding-bottom:40px;
+background-color:orange;
+-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: #fff;
 }
 
+
+.rule_reset-box button{
+
+margin-top:8px;
+border: #a90329 solid 2px;
+}
+/* end commit*/
 .timer-count  {
   display: flex;
+  
     }
 
-.timer-count h5  {
-   margin-right:10px; 
-    }
+/* commit deleted turn box*/
 
 
-.turn-box {
-    height: 60px;
-    border: solid 2px blue;
-    background-color: green;
-}
 
 
 
 /***************************
- modal
+ modal https://www.youtube.com/watch?v=gLWIYk0Sd38 <-- how i created modal 
 ******************************/
-
-form {
-    margin: auto;
+.bg-lose-modal, .bg-win-modal {
+    width: 100%;
+    height : 100%;
+    background-color: rgba(0,0,0,0.7);
+    position:absolute;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
-
-
-
-.btn-win {
-    width: 80%;
-    text-align: center;
-    display: block;
-    margin: 30px auto;
-    border: solid 2px blue;
-}
-
-.name-modal,
-.win-modal,
 .modal-content {
-    height: 300px;
-    width: 300px;
-    margin: auto;
-    background-color: orange;
+width :600px;
+height :300px;
+background-color: white; 
+position: relative;
 }
 
-.name-modal .how-to-play-modal h3 {
+.modal-content button {
+display:block;
+margin-top: 45px;
+color:#000;
+-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: #fff;
+border: #a90329 solid 2px;
+}
 
+.modal-content h2   {
+
+text-align: center;
+color:#000;
+margin-top:40px;
+font-size: 35px;
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: #fff;
+/*https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text*/
+}
+
+.close{
+    position: absolute;
+    top:0;
+    right:14px; 
+    font-size :42px;
+    transform:rotate(45deg);
+    cursor:pointer;
+}
+
+.modal-score-container{
+    margin-top: 25px;
+}
+
+.modal-score-container p {
     text-align: center;
-    margin-top: 30px;
-    background-color: orange;
+    font-size: 30px;
+    margin-top: 5px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
 }
 
-.win-modal h3 {
-    margin:140px 0 ;
-    text-align: center;
-}
+.win-modal-scores {
+text-align: center; 
+font-size:20px;
+margin: 30px, 0;
+-webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: #fff;
+} 
+/* commit*/
+.lose-modal {
+    text-align: center; 
+    font-size:20px;
+    margin: 30px, 0;
+    } 
+    
 
-.lose-modal h3 {
-    margin-top:140px  ;
-    text-align: center;
-}
-
-.lose-modal p {
-    margin-bottom:140px;
-    text-align: center;
-    font-size:25px;
-}
 /***************************
- 
+ game code 
 ******************************/
 
 /* Memory game: game container code */
@@ -150,13 +220,13 @@ form {
 .memory-game {
     width: 280px;
     height: 350px;
-    margin: auto;
+    margin: 60px auto;
     /*This is meant to centre the game board but to noavail */
     display: flex;
     flex-wrap: wrap;
     /* flex has default property of "nowrap" */
     perspective: 1000px;
-    border: 2px solid lime;
+    /* removed border */
 }
 
 .memory-card {
@@ -200,7 +270,7 @@ form {
     /* When you add postion absolute  the element has to position its self relative to its nearest  ancestor 
          if this cant be done then its positions itself relative to the body elemnent */
     border-radius: 5px;
-    background: #1c7ccc;
+    background: #ffffff; /*commit*/
     backface-visibility: hidden;
     /*eaxh html element has a backface this must be set to hidden so when you flip a card
             its backface isnt shown */
