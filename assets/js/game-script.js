@@ -12,13 +12,18 @@ const ranks = [ "A", "B", "C","D"  ]; // to comit
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
 var turn = 0 ;
 var counter = document.getElementById("counter")
 var timerInterval = 0; 
-var loseModal = document.getElementById("lose-model")
 var numOfMatchedCards = 0 ;
 var rank_score_display = document.getElementById("rank");
-///reset button //
+
+
+window.onload = shuffle();
+
+
+//main game/reset button //
  document.getElementById("reset-btn").addEventListener( "click",   function(){
        resetGame()   
        hideModel() 
@@ -36,9 +41,62 @@ var rank_score_display = document.getElementById("rank");
     resetGame()   
     hideModel() 
  });
+ 
+ 
+ //// modal close/display functions 
+ 
+ function displayLoseModal() { 
+   document.querySelector(".bg-lose-modal").style.display = "flex";
+}
 
 
-window.onload = shuffle();
+function hideModel() { 
+    document.querySelector(".bg-lose-modal").style.display = "none";
+    document.querySelector(".bg-win-modal").style.display = "none";
+
+}
+
+document.querySelector(".close").addEventListener("click",
+function(){
+    hideModel()   
+}
+);
+ 
+ 
+  /// reset game function
+ 
+ 
+ function resetGame() {
+//add event listener 
+cards.forEach(card => card.addEventListener("click", flipcard)); 
+// reset matched cards
+numOfMatchedCards = 0 ;
+
+//remove class 
+$(".memory-card").removeClass('flip');//had to use JQuery here in order to remove this class and reset the game. 
+
+//shuffle board
+
+shuffle();
+
+    //reset moves
+    turn = 0 ;
+    counter.innerHTML = "Turn:" + turn;
+
+    //reset timer
+
+ timer.innerHTML = "Time:" + "02" + ";" + "30" 
+ clearInterval(timerInterval)
+ timerInterval = 0;
+ timeleft = 180;
+ timeCounter = 0;
+
+// reset rank 
+var rank_score_display = document.getElementById("rank");
+rank_score_display.innerHTML = "Rank:" + ranks[0];
+
+}
+
 
 
 //////////game board code ///////////////////
@@ -119,10 +177,11 @@ function shuffle() {
 };
 cards.forEach(card => card.addEventListener("click", flipcard));
 
-///////////// Move counter //////////////////////
+
+///////////// turn counter //////////////////////
 
 
-// changes to commit : timer code and move code.
+// changes to commit: timer code and turnCounter code.
 
 function turnCounter(){
 
@@ -157,27 +216,6 @@ function matchedCards() {
 
 }
 
-//// win pop up///
-
-function win(){
-    document.querySelector(".bg-win-modal").style.display = "flex";
-
-var finalRank = rank_score_display.innerHTML;
- var   finalTime = timer.innerHTML;
-  var   finalMoves = counter.innerHTML;
-
-
-
-    document.getElementById("finalRankScore").innerHTML = finalRank;
-    document.getElementById("finalTimeScore").innerHTML = "Time:" + finalTime;
-    document.getElementById("finalMovesScore").innerHTML = finalMoves ;
-
-
-
-}
-
-
-
 /////////////timer code //////////////////////
 
 var timeleft = 150;
@@ -203,7 +241,7 @@ function convertTime (s) {
 
      var rank_score_display = document.getElementById("rank");
 
-     if(mins == 02 && secs  == 30 ) {
+     if(mins == 02 && secs  == 30 ) { 
      rank_score_display.innerHTML = "Rank:" + ranks[0];
      
      }
@@ -247,7 +285,7 @@ function beginTimer() {
     var timeleft = 150;
 
 if (timerInterval == 0 ) {
-//changed display for timer. 
+//changes display for timer . 
     timer.innerHTML = "Time" +  ":" + convertTime(timeleft - timeCounter);
     
 
@@ -261,60 +299,26 @@ timerInterval = setInterval( function startTimer() {
 }
 
 
+//// win pop up///
+
+function win(){
+    document.querySelector(".bg-win-modal").style.display = "flex";
+
+var finalRank = rank_score_display.innerHTML;
+ var   finalTime = timer.innerHTML;
+  var   finalMoves = counter.innerHTML;
 
 
 
-function displayLoseModal() { // commit 
-   document.querySelector(".bg-lose-modal").style.display = "flex";
+    document.getElementById("finalRankScore").innerHTML = finalRank;
+    document.getElementById("finalTimeScore").innerHTML = "Time:" + finalTime;
+    document.getElementById("finalMovesScore").innerHTML = finalMoves ;
+
+
+
 }
-
-
-function hideModel() { /// commit chaNGE 
-    document.querySelector(".bg-lose-modal").style.display = "none";
-    document.querySelector(".bg-win-modal").style.display = "none";
-
-}
-
-//////////modal close button ////////// comit change 
-
-document.querySelector(".close").addEventListener("click",
-function(){
-    hideModel()   
-}
-);
 
 
  
 
 
-// changes to commit 
-function resetGame() {
-//add event listener 
-cards.forEach(card => card.addEventListener("click", flipcard)); 
-// reset matched cards
-numOfMatchedCards = 0 ;
-
-//remove class 
-$(".memory-card").removeClass('flip');//had to use JQuery here. 
-
-//shuffle board
-
-shuffle();
-
-    //reset moves
-    turn = 0 ;
-    counter.innerHTML = "Turn:" + turn;
-
-    //reset timer
-
- timer.innerHTML = "Time:" + "02" + ";" + "30" 
- clearInterval(timerInterval)
- timerInterval = 0;
- timeleft = 180;
- timeCounter = 0;
-
-// reset rank 
-var rank_score_display = document.getElementById("rank");
-rank_score_display.innerHTML = "Rank:" + ranks[0];
-
-}
