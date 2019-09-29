@@ -11,7 +11,7 @@
 
 ##### External User Goals/stories 
 * As an external user I would like the controls to be easy so I can easily play the game. 
-*  As an external user I would like there to be instructions on how to play the game in order to quickly understand and play the game without having to spend time figuring out the controls and rules.
+* As an external user I would like there to be instructions on how to play the game in order to quickly understand and play the game without having to spend time figuring out the controls and rules.
 * As an external user I would like to know when I have won the game. 
 * As an external user I would like to be able to restart the game if i make a mistake or lose. 
 * As an external user I would like to keep track of my score if this is applicable to the game. 
@@ -32,10 +32,11 @@ Click [here]() to get to testing page.
 * The page features responsive traits. Its structure changes based on the screen size. 
 * Rank - The dashboard features a ranking system based on the time the player takes to complete the game. 
 * Turn - The dashboard features a turn counter which counts the amount of turns the player take each time two cards are flipped. 
-* Timer
-* gameboard 
-* buttons/close
-* modals 
+* Timer - The dashboard features a timer which counts down from 2:30 this is triggered when the player clicks on two cards.
+* Gameboard - This features 12 cards that flip when you click them. Javascript and css is used to manipulate the cards, this includes rotating, matching the cards click events, and keeping the cards open when a match is complete. 
+* Buttons/Close -There are several buttons on the game. There are reset buttons which resets the gameboard, timer, rank and and turn counter. There are also several close buttons that hide the modals when they are deployed. 
+* Modals - There are 3 modals in the game. A win modal, lose modal and how to play modal. These modals are triggered through different events such as winning the game, losing the game or simply just clicking a button. 
+The win modal displays the Rank, Time and number of turns the player takes. The win and lose modal features a reset button each. 
 
 #### Features left to implement :
 ***
@@ -67,26 +68,26 @@ Click [here]() to get to testing page.
 
  **From the development stage to deployment stage.**
  
- I made some  changes during the decvelopment from the initial designs see in the wireframe mockups:
- * Homepage- I took out the extra links to the other pages on my site because I didn't want to cause information overload to the viewer by presenting too many options.
- * About me - originally i was going to make it so the image and the text box on the page would change positions as the screen size changed but I thought this was unnecessary and could be made simplier, so i kept the page the same even when the screen size changed. 
- * Blog - originally i was going to change the structure of the boxes on this page on the desktop view but decided against it because i wanted to keep the page simple, so i kept the structure the same even when the screen size changes.
- 
+* I made some changes to the structure I initially designed in the wireframe during the development process. These changes were because i ran out of time and it would have taken too long to implement some features as i was unaware of how to use javascript at the time. So i focused on what little I knew and what i could learn quickly.  These features being adding "local storage" which i talk about in my "features left to implement" section.  
+* Another change I made to the structure was relocating the position of the turn counter. I did this so that visually it would be easier for the player to see there stats, so displaying Rank, Timer, and Turn counter stacked over each other in one place rather than having theses stats dispersed over the screen. 
 
 #### Credits -
 ***
 
 ###### Content -
-* The text used for this site was taken from google fonts library 
+* The font style for the text used for this site was taken from google fonts library 
 
 ###### Media -
- 
+* The images used  are not mine they were taken from google images. 
 
 ###### Code - 
-*
+I used [https://www.youtube.com/watch?v=ZniVgo8U7ek]() 
+     this youtube video to build the basic gameboard for this game. I added to the code where necessary to implement further features I wanted for my game.  
 
 ###### Acknowledgements
 
+* I took inspiration from japanese anime I love to watch. 
+* i took inspiration from this game "fruit flip" [https://www.brain-games.co.uk/game/Fruit+Flip]()
 
 *Disclaimer*
 * The content for this Website is for educational purposes only.
