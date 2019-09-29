@@ -52,7 +52,7 @@
                 <div class="row px-2  mt-3  ">
                     <div class="col-12 ">
                         <div class="row rule_reset-box   mt-1 justify-content-center">
-                            <button type="button" class="btn btn-warning mx-auto" data-toggle="modal" data-target="#exampleModal4">Rules</button>
+                            <button type="button" id="how-to-play-modal-reset-btn" class="btn btn-warning mx-auto">Rules</button>
                             <button type="button" id="reset-btn" class="btn btn-warning  mx-auto">Reset</button>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
     <!--win modal-->
     <div class="bg-win-modal ">
         <div class="modal-content win-bg">
-            <div class="close">+</div>
+            <div  id="close-btn1" class="close">+</div>
             <h2>You win !</h2>
 
             <div class="modal-score-container">
@@ -157,7 +157,7 @@
 
     <div class="bg-lose-modal">
         <div class="modal-content  lose-bg">
-            <div class="close">+</div>
+            <div id="close-btn2" class="close">+</div>
             <h2> You lose! </h2>
             <div class="modal-score-container">
                 <p> * Banished to the shadow realm! * </p>
@@ -168,7 +168,20 @@
     </div>
 
     <!--how-to-play modal-->
+ <div class="bg-how-to-play-modal">
+        <div class="modal-content how-to-play-bg ">
+            <div  id="close-btn3" class="close">+</div>
+            <h2> How to play! </h2>
+            <div class="modal-score-container">
+                <p> Match the cards before time runs out!  </p>
+                <p> you will be assigned a rank based on your time. </p>
+                <p>Good luck!</p>
+            
 
+               
+            </div>
+        </div>
+    </div>
 
 
 

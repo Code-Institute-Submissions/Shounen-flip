@@ -33,6 +33,14 @@ shonen background  settings
     -o-background-size: 600px 300px;  
 }
 
+.how-to-play-bg {
+    background: url("../image/how-to-play.jpg") no-repeat fixed center;
+    background-size: 600px 300px;    
+-webkit-background-size: 600px 300px;
+    -moz-background-size: 600px 300px;
+    -o-background-size: 600px 300px;  
+}
+
 
 /***************************
 container/box settings 
@@ -136,11 +144,11 @@ border: #a90329 solid 2px;
 /***************************
  modal https://www.youtube.com/watch?v=gLWIYk0Sd38 <-- how i created modal 
 ******************************/
-.bg-lose-modal, .bg-win-modal {
+.bg-how-to-play-modal, .bg-lose-modal, .bg-win-modal {
     width: 100%;
     height : 100%;
     background-color: rgba(0,0,0,0.7);
-    position:absolute;
+    position:fixed;
     top:0;
     display:flex;
     justify-content: center;
@@ -190,7 +198,7 @@ font-size: 35px;
 
 .modal-score-container p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 5px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #fff;
