@@ -56,8 +56,8 @@ container/box settings
 }
 
 .shounen-game-container {
-    min-height: 100vh;
-    padding: 0 15px 5px;
+    min-height: 60vh;
+   
    /* delete the bg colors here and also i pput shonen 
    bg class in the shounen container. */
 }
@@ -65,14 +65,10 @@ container/box settings
 .dashboard-container {
     background-color: #a90329;
  background-image: radial-gradient( #000000 15%, #a90329 );
-     min-height: 100vh;
+     min-height: 60vh;
+     padding-bottom: 50px;
 }
 
-.game-board-container {
-    background-color: ;
-
-
-}
 
 
 .name-container {
@@ -90,8 +86,8 @@ container/box settings
 .title-box {
 
     height: 60px;
-    width: 312px;
-    margin: auto;
+    width: 300px;
+    margin:0 auto;
    text-align: center; 
     background-color: orange;
     -webkit-text-stroke-width: 0.5px;
@@ -100,8 +96,8 @@ container/box settings
 
 .dashboard-box {
     height: 170px;
-    width: 312px;
-   margin: auto;
+    width: 300px;
+  margin:0 auto;
     background-color: orange;
     -webkit-text-stroke-width: 0.1px;
 -webkit-text-stroke-color: #fff;
@@ -115,8 +111,8 @@ container/box settings
 
 .rule_reset-box {
     height: 60px;
-    width: 350px;
-    margin: auto;
+    width: 300px;
+   margin: 0 auto;
     padding-bottom:40px;
 background-color:orange;
 -webkit-text-stroke-width: 0.5px;
@@ -127,6 +123,7 @@ background-color:orange;
 .rule_reset-box button{
 
 margin-top:8px;
+margin-left:30px;
 border: #a90329 solid 2px;
 }
 /* end commit*/
@@ -338,9 +335,9 @@ media queries
         font-size: 15px;
 
     }
+
+
 }
-
-
 
 /* --desktop screens--- */
 
@@ -356,12 +353,28 @@ media queries
         font-size: 20px;
 
     }
+    
+    .shounen-game-container {
+    min-height: 100vh;
+   
+  
+}
+
+.dashboard-container {
+     min-height: 100vh;
+}
+
 
     .title-box {
         width: 350px;
         height: 80px;
         margin: auto;
     }
+
+  .title-box h1 {
+        margin: 20px auto;
+    }
+
 
     .dashboard-box {
         /*this is to fix positioning problems*/
@@ -372,7 +385,7 @@ media queries
     }
 
 
-    .timer-box {
+   .rule_reset-box  {
         /*this is to fix positioning problems*/
         width: 350px;
 
