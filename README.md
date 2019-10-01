@@ -20,9 +20,9 @@
 
 
 ##### Wireframes 
-Click [/assets/image/gamepage.jpg]() to get html wireframe. 
-Click [here]() to get to testing page. 
-Click [here]() to get to testing page. 
+Click [https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/gamepage.jpg]() This image portrays how the gamepage will look. 
+Click [https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/modal-on-screen.jpg]() This image portrays how the modals will display on screen. These modals are triggered when certain conditions are met. 
+Click [https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/win-lose-modal.jpg]() This image portrays how the modal pop ups themselves will look. The win pop up will display the players rank, time and turn.  
 
 
 
