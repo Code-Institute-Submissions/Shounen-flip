@@ -1,5 +1,5 @@
 # Memory-Game : Shounen Flip.  
-**Overview** – The game features a one page html document with css and javascript used to style and animate HTML elements on the page 
+**Overview** – The game features a one page html document with css and javascript used to style and animate HTML elements on the page.
 
 
 ### UX Design
@@ -20,7 +20,7 @@
 
 
 ##### Wireframes 
-Click [here]() to get html wireframe. 
+Click [/assets/image/gamepage.jpg]() to get html wireframe. 
 Click [here]() to get to testing page. 
 Click [here]() to get to testing page. 
 
@@ -49,6 +49,11 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 ####  Technologies Used
 ***
 
+*	Cloud - I used Cloud9 as the IDE while developing the website. 
+*	This project uses HTML and CSS for the structuring and styling. 
+*	BootstrapCDN - The project uses Bootstrap4  for easy structuring and to make the project responsive . 
+*	Google Fonts - The project uses Google fonts to style the website fonts.
+*	Javascript - The project uses Javascript to manipulate the game cards and create the game mechanics.
 
 
 #### Testing 
@@ -59,11 +64,22 @@ Click [here]() to get to testing page.
 #### Deployment
 ***
 
-
-
 **To deploy this site locally follow these steps:**
 
+ Log onto GitHub.
+* on the left side of the screen, select the repository with the name xxkaminaxx/xxkaminaxx.github.io 
+*Then from the menu items, select Settings.
+* Keep scrolling down till you get to the GitHub Pages section.
+* within that section, click the button under source labelled None and select Master Branch
+* when you select the master branch the page will be freshed and the website would then be deployed.  deployed.
+* Scroll back down again to the GitHub Pages section and click the link to the deployed website.
 
+**To deploy this site locally follow these steps:**
+* Click this link to the repository https://github.com/xxkaminaxx/xxkaminaxx.github.io
+* Then click the "clone or download" button on the right side of the screen. 
+* Copy the link given then open up the IDE you wish to clone the repository in
+* Within the terminal in the repository, type in  "git clone " then paste the link next to git clone and press enter 
+* You should have the folder in your IDE. 
 
 
  **From the development stage to deployment stage.**
