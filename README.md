@@ -20,9 +20,9 @@
 
 
 ##### Wireframes 
-*  [Gamepage](https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/gamepage.jpg) This image portrays how the gamepage will look. 
-*  [Modal-On-Screen](https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/modal-on-screen.jpg) This image portrays how the modals will display on screen. These modals are triggered when certain conditions are met. 
-* [Win-lose-Modals](https://github.com/xxkaminaxx/Second-milestone--memory-game/blob/master/assets/image/win-lose-modal.jpg) This image portrays how the modal pop ups themselves will look. The win pop up will display the players rank, time and turn.  
+*  [Gamepage](https://github.com/xxkaminaxx/Shounen-flip/blob/master/assets/image/gamepage.jpg) This image portrays how the gamepage will look. 
+*  [Modal-On-Screen](https://github.com/xxkaminaxx/Shounen-flip/blob/master/assets/image/modal-on-screen.jpg) This image portrays how the modals will display on screen. These modals are triggered when certain conditions are met. 
+* [Win-lose-Modals](https://github.com/xxkaminaxx/Shounen-flip/blob/master/assets/image/win-lose-modal.jpg) This image portrays how the modal pop ups themselves will look. The win pop up will display the players rank, time and turn.  
 
 
 
@@ -67,7 +67,7 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 **When deploying my memory game from github, I followed these steps:**
 
 * Log onto GitHub.
-* on the left side of the screen, select the repository with the name " **xxkaminaxx.github.io-Shounen-flip-** "
+* on the left side of the screen, select the repository with the name " **Shounen-flip** "
 * Then from the menu items I selected Settings.
 * I scrolled down till I got to the GitHub Pages section.
 * within that section, I clicked the button under "**source**" labelled "**None**" and selected Master Branch
@@ -75,7 +75,7 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 * Scroll back down again to the GitHub Pages section and click the link to the deployed website. 
 
 **To deploy this site locally follow these steps:**
-* Click this link to the repository https://github.com/xxkaminaxx/Second-milestone--memory-game
+* Click this link to the repository https://github.com/xxkaminaxx/Shounen-flip
 * Then click the "clone or download" button on the right side of the screen. 
 * Copy the link given then open up the IDE you wish to clone the repository in
 * Within the terminal in the repository, type in  "git clone " then paste the link next to git clone and press enter 
