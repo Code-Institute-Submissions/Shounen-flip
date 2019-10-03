@@ -24,11 +24,47 @@ The webpages used to create this site were validated using W3C validators
 
 
 ##### **Part-2**  Manual testing 
+**Game-board/ dashboard values**
+
+1) click one of the cards and see if they flip. 
+2) Try and match two cards that arent the same, they should pause for a secound then unflip. 
+3) Try and match two cards that are the sane. The cards should remain flipped. 
+4) Try and match all the cards on the board a win modal should display on the screen. 
+5) click on two cards and see if the timer starts counting down. 
+6) click on two cards wait for the timer to run out, check to see if a lose modal is displayed. 
+7) click on two cards see if the value of the turn counter increments by one. 
+8) click card one to flip then click on card two ( make sure it doesn't match with card one) really fast repeatedly to see if the card unflips. 
+
+
+**Dashboard buttons**
+1) click the "rules" button see if the "how to play modal" displays 
+2) click the "reset" button see if the see if the following dashboard values reset: Rank, Turn and time.
+
+**Modals**
+
+1) when win modal is displayed, see if the following values from the final stats, when the game is complete are displayed. 
+2) when lose modal is displayed, see if the reset button unflips cards and resets the dashboard stats. 
+3) click the close button on the win/lose modals to see if they close. 
+
+**Responsive tests** 
+1) check how the game looks on various screen sizes do this through " dev tools " make sure the page only scrolls vertically not horzontally. 
+
 
 
 
 ##### **Part-3** Third party testing
 
+I asked my friends and sister to test game no bugs were found. 
 
 
-##### **Part-5**   Bugs found
+
+##### **Part-5**   Bugs found 
+
+I found a couple bugs when developing the game: 
+
+1 ) When trying to find a way to trigger the timer i orginally allocated an event listener to the cards in the game board whench when clicked would trigger the count down on the timer however the problem with this approuch is that whenever 
+i clicked on the cards it would speed up the count down so in order to solve this problem i created an "if" statment wheich triggered th function "beginTimer" when the turn counter when from 0 to 1. This meant that i could click the cards as many times as i liked and this would not speed up the count down. 
+
+2) Another problem i ran into was when the matching of the cards and repeatedly clikcking the second card the first card xclicked would stay open. 
+
+in order to solve this problem i 
