@@ -67,4 +67,4 @@ i clicked on the cards it would speed up the count down so in order to solve thi
 
 2) Another problem i ran into was when the matching of the cards and repeatedly clikcking the second card the first card xclicked would stay open. 
 
-in order to solve this problem i 
+in order to solve this problem 

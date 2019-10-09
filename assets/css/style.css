@@ -10,7 +10,7 @@ shonen background  settings
 ******************************/
 /* commit */  
 .shonen-bg {
-    background: url("../image/shonen-bg.jpg") no-repeat fixed center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../image/shonen-bg.jpg") no-repeat fixed center;
     -webkit-background-size:cover ;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -250,6 +250,8 @@ margin: 30px, 0;
     transform-style: preserve-3d;
     /* This + perspective property and transition:transform makes the card flip 3d */
     transition: transform .5s;
+    border : solid 3px #000;
+    border-radius: 5%;
 }
 
 .memory-card:active {
