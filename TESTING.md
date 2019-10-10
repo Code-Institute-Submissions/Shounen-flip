@@ -60,11 +60,34 @@ I asked my friends and sister to test game no bugs were found.
 
 ##### **Part-5**   Bugs found 
 
-I found a couple bugs when developing the game: 
+I found a  bug when developing the game: 
 
-1 ) When trying to find a way to trigger the timer i orginally allocated an event listener to the cards in the game board whench when clicked would trigger the count down on the timer however the problem with this approuch is that whenever 
-i clicked on the cards it would speed up the count down so in order to solve this problem i created an "if" statment wheich triggered th function "beginTimer" when the turn counter when from 0 to 1. This meant that i could click the cards as many times as i liked and this would not speed up the count down. 
+1 ) When trying to find a way to trigger the timer I orginally allocated an event listener to the cards in the gameboard which when clicked would trigger the count down on the timer however the problem with this approuch is that whenever 
+I clicked on the cards it would speed up the count down so in order to solve this problem I created an "if" statment which triggered the function "beginTimer" when the turn counter when from 0 to 1. This meant that I could click the cards as many times as I liked and this would not speed up the countdown. 
 
-2) Another problem i ran into was when the matching of the cards and repeatedly clikcking the second card the first card xclicked would stay open. 
 
-in order to solve this problem 
+
+**Solution:**
+```
+function turnCounter() {
+
+
+    turn++;
+    counter.innerHTML = "Turns:" + " <span style=\"color:#a90329\">" +  turn + "</span>" ;
+   
+  
+
+    if (turn == 1) {
+
+        beginTimer();
+
+
+
+    }
+
+
+}
+
+
+
+```
