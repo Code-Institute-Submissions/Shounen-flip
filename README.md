@@ -104,5 +104,12 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
      this youtube video to build the basic gameboard for this game. I added to the code where necessary to implement further features I wanted for my game.  
 
 
+* I was able to change the color of the value of the inner HTML in the dashboard from the help of this information from Quora
+ https://www.quora.com/How-can-I-change-the-color-of-inner-HTML-var-value-text-with-JavaScript
+
+```
+
+
+```
 *Disclaimer*
 * The content for this Website is for educational purposes only.

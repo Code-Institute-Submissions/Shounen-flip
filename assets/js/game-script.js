@@ -216,7 +216,9 @@ function turnCounter() {
 
 
     turn++;
-    counter.innerHTML = "Turns:" + turn;
+    counter.innerHTML = "Turns:" + " <span style=\"color:#a90329\">" +  turn + "</span>" ;
+   
+  
 
     if (turn == 1) {
 
@@ -271,23 +273,22 @@ function convertTime(s) {
     var rank_score_display = document.getElementById("rank");
 
     if (mins == 02 && secs == 30) {
-        rank_score_display.innerHTML = "Rank:" + ranks[0];
+        rank_score_display.innerHTML = "Rank:" + "<span style=\"color:#a90329\">" + ranks[0]  + "</span>" ; 
 
     }
 
     if (mins == 01 && secs == 45) {
-        rank_score_display.innerHTML = "Rank:" + ranks[1];
+        rank_score_display.innerHTML = "Rank:" + "<span style=\"color:blue\">" + ranks[1]  + "</span>" ; 
 
     }
 
     if (mins == 01 && secs == 00) {
-        rank_score_display.innerHTML = "Rank:" + ranks[2];
+        rank_score_display.innerHTML = "Rank:" + "<span style=\"color:purple\">" + ranks[2]  + "</span>" ; 
 
     }
 
     if (mins == 00 && secs == 20) {
-        rank_score_display.innerHTML = "Rank:" + ranks[3];
-
+        rank_score_display.innerHTML = "Rank:" + "<span style=\"color:green\">" + ranks[3]  + "</span>" ; 
 
     }
 
@@ -305,7 +306,7 @@ function convertTime(s) {
     }
 
     return mins + ":" + secs;
-};
+}
 
 
 function beginTimer() {
@@ -315,12 +316,12 @@ function beginTimer() {
 
     if (timerInterval == 0) {
         //changes display for timer . 
-        timer.innerHTML = "Time" + ":" + convertTime(timeleft - timeCounter);
+        timer.innerHTML = "Time" + ":" + "<span style=\"color:#a90329\">" + convertTime(timeleft - timeCounter) + "</span>" ;
 
 
         timerInterval = setInterval(function startTimer() {
             timeCounter++;
-            timer.innerHTML = "Time" + ":" + convertTime(timeleft - timeCounter);
+            timer.innerHTML = "Time" + ":" + "<span style=\"color:#a90329\">" + convertTime(timeleft - timeCounter) + "</span>" ;
         }, 1000);
 
     }

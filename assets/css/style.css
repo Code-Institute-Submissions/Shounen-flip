@@ -86,7 +86,7 @@ container/box settings
 .title-box {
 
     height: 60px;
-    width: 300px;
+    width: 290px;
     margin:0 auto;
    text-align: center; 
     background-color: orange;
@@ -96,7 +96,7 @@ container/box settings
 
 .dashboard-box {
     height: 170px;
-    width: 300px;
+    width:290px;
   margin:0 auto;
     background-color: orange;
     -webkit-text-stroke-width: 0.1px;
@@ -105,17 +105,17 @@ container/box settings
 
 
 .dashboard-box h5 {
-    font-size: 15px;
+    font-size: 25px;
 }
 /* timer box class chanagd to rue_reset box */
 
 .rule_reset-box {
     height: 60px;
-    width: 300px;
+    width: 290px;
    margin: 0 auto;
     padding-bottom:40px;
 background-color:orange;
--webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-width: 0.3px;
 -webkit-text-stroke-color: #fff;
 }
 
@@ -125,14 +125,15 @@ background-color:orange;
 margin-top:8px;
 margin-left:30px;
 border: #a90329 solid 2px;
+font-size: 20px;
 }
-/* end commit*/
+
 .timer-count  {
   display: flex;
   
     }
 
-/* commit deleted turn box*/
+
 
 
 
@@ -198,6 +199,14 @@ font-size: 35px;
     font-size: 25px;
     margin-top: 5px;
     -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.modal-how-to-play-container p {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #fff;
 }
 
@@ -297,18 +306,18 @@ media queries
 
 @media (max-width:414px) {
     .title-box {
-        margin: auto;
+        margin: aut;
     }
 
     .dashboard-box {
         /*this is to fix positioning problems with the dashboard */
-        margin: auto;
+        margin:0 auto;
     }
 
 
     .timer-box {
         /*this is to fix positioning problems with the timer box*/
-        margin: auto;
+        margin: aut;
     }
 }
 
@@ -339,6 +348,43 @@ media queries
     }
 
 
+ .shounen-game-container {
+    min-height: 100vh;
+   
+  
+}
+.dashboard-container {
+     min-height: 100vh;
+}
+
+
+.dashboard-box {
+       
+       
+        height: 320px;
+
+       
+        -webkit-text-stroke-width: 0.5px;
+-webkit-text-stroke-color: #fff;
+    }
+
+.rule_reset-box button{
+
+font-size: 22px;
+}
+
+
+
+
+.memory-game {
+    width: 430px;
+    height: 500px;
+
+}
+
+
+
+
 }
 
 /* --desktop screens--- */
@@ -346,8 +392,8 @@ media queries
 @media (min-width:992px) {
 
     .btn {
-        width: 90px;
-        font-size: 20px;
+        width: 30%;
+       
     }
 
 
@@ -356,43 +402,50 @@ media queries
 
     }
     
-    .shounen-game-container {
-    min-height: 100vh;
-   
   
-}
-
-.dashboard-container {
-     min-height: 100vh;
-}
-
 
     .title-box {
-        width: 350px;
-        height: 80px;
-        margin: auto;
+        width:90% ;
+      height: 10%;
     }
 
   .title-box h1 {
+      font-size: 45px;
         margin: 20px auto;
     }
 
 
     .dashboard-box {
         /*this is to fix positioning problems*/
-        width: 350px;
-        height: 120px;
+        width: 90%;
+  
 
-        margin: auto;
+  
+      
     }
+
+ .dashboard-box h5 {
+      font-size:40px;
+    }
+
+
 
 
    .rule_reset-box  {
         /*this is to fix positioning problems*/
-        width: 350px;
-
-        margin: auto;
+        width: 90%;
+       height: 15%;
     }
+    
+    
+    .rule_reset-box button{
+
+font-size: 40px;
+    }
+
+.reset-box-pt{
+    padding-top: 25px;
+}
 
     .turn-box {
         width: 350px;
@@ -409,5 +462,67 @@ media queries
         height: 680px;
         width: 500px;
     }
+
+
+/*modal styling */
+
+.modal-content {
+width :800px;
+height :500px;
+background-color: white; 
+position: relative;
+}
+
+.modal-content h2   {
+ font-size: 50px;
+ 
+}
+.modal-content button {
+    font-size:30px;
+}
+
+.how-to-play-bg {
+    background: url("../image/how-to-play.jpg") no-repeat fixed center;
+    background-size: 800px 500px;    
+-webkit-background-size: 800px 500px;
+    -moz-background-size: 800px 500px;
+    -o-background-size: 800px 500px;  
+}
+
+
+.win-bg {
+    background: url("../image/victory.jpg") no-repeat fixed center;
+    background-size: 800px 500px;      
+-webkit-background-size: 800px 500px;  
+    -moz-background-size: 800px 500px;  
+    -o-background-size: 800px 500px;  
+}
+
+.lose-bg {
+    background: url("../image/kaiba-defeat.jpg") no-repeat fixed center;
+    background-size: 800px 500px;     
+-webkit-background-size: 800px 500px;  
+    -moz-background-size: 800px 500px;  
+    -o-background-size: 800px 500px;  
+}
+
+.modal-score-container p {
+    font-size:40px; 
+}
+
+.modal-how-to-play-container p {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff;
+}
+
+
+.win-modal-scores {
+ 
+font-size:40px;
+
+} 
 
 }
