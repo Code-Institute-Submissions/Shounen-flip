@@ -63,15 +63,15 @@ document.getElementById("close-btn3").addEventListener("click",  function() {
     });
 
 
-//// modal close/display functions 
+//// modal close/display functions  
 
 function displayHowToPlayModal() {
     document.querySelector(".bg-how-to-play-modal").style.display = "flex";
 }
 
-function displayLoseModal() {
+function displayLoseModal() { 
     document.querySelector(".bg-lose-modal").style.display = "flex";
-}
+}  
 
 
 function hideWinModel() {
@@ -85,7 +85,6 @@ function hideLoseModal() {
 }
 // 
 function hideHowToPlayModal() {
-console.log("test close");
     document.querySelector(".bg-how-to-play-modal").style.display = "none";
 }
 
@@ -321,7 +320,7 @@ function beginTimer() {
 
         timerInterval = setInterval(function startTimer() {
             timeCounter++;
-            timer.innerHTML = "Time" + ":" + "<span style=\"color:#a90329\">" + convertTime(timeleft - timeCounter) + "</span>" ;
+            timer.innerHTML ="Time" + ":" + "<span style=\"color:#a90329\">" + convertTime(timeleft - timeCounter) + "</span>" ;
         }, 1000);
 
     }
@@ -340,9 +339,9 @@ function win() {
 
 
 
-    document.getElementById("finalRankScore").innerHTML = finalRank;
-    document.getElementById("finalTimeScore").innerHTML = "Time:" + finalTime;
-    document.getElementById("finalMovesScore").innerHTML = finalMoves;
+    document.getElementById("finalRankScore").innerHTML =  finalRank;
+    document.getElementById("finalTimeScore").innerHTML = finalTime;
+    document.getElementById("finalMovesScore").innerHTML =  finalMoves;
 
 
 

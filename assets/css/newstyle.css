@@ -8,7 +8,7 @@ body {
 /***************************
 shonen background  settings 
 ******************************/
-/* commit */  
+
 .shonen-bg {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../image/shonen-bg.jpg") no-repeat fixed center;
     -webkit-background-size:cover ;
@@ -47,7 +47,7 @@ container/box settings
 ******************************/
 
 .row {
-   /* commit */
+  
     height: auto;
 }
 
@@ -58,10 +58,9 @@ container/box settings
 .shounen-game-container {
     min-height: 60vh;
    
-   /* delete the bg colors here and also i pput shonen 
-   bg class in the shounen container. */
+   
 }
-/* commit */
+
 .dashboard-container {
     background-color: #a90329;
  background-image: radial-gradient( #000000 15%, #a90329 );
@@ -82,7 +81,6 @@ container/box settings
 .high-score-container {
     width: 150px;
 }
-/* commit*/
 .title-box {
 
     height: 60px;
@@ -107,7 +105,7 @@ container/box settings
 .dashboard-box h5 {
     font-size: 25px;
 }
-/* timer box class chanagd to rue_reset box */
+
 
 .rule_reset-box {
     height: 60px;
@@ -148,7 +146,6 @@ font-size: 20px;
     background-color: rgba(0,0,0,0.7);
     position:fixed;
     top:0;
-    display:flex;
     justify-content: center;
     align-items: center;
     display: none;
@@ -163,7 +160,7 @@ position: relative;
 
 .modal-content button {
 display:block;
-margin-top: 45px;
+margin-top: 10px;
 color:#000;
 -webkit-text-stroke-width: 0.5px;
 -webkit-text-stroke-color: #fff;
@@ -178,7 +175,6 @@ margin-top:40px;
 font-size: 35px;
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-color: #fff;
-/*https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text*/
 }
 
 .close{
@@ -191,7 +187,7 @@ font-size: 35px;
 }
 
 .modal-score-container{
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .modal-score-container p {
@@ -202,18 +198,31 @@ font-size: 35px;
     -webkit-text-stroke-color: #fff;
 }
 
+
+
 .modal-how-to-play-container p {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 5px;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #fff;
 }
 
+/* For better readbility on tablet and desktop size */
+
+
+@media (min-width:768px) {
+.modal-how-to-play-container p {
+    font-size:40px;
+   
+}
+
+
+}
 .win-modal-scores {
 text-align: center; 
-font-size:20px;
-margin: 30px  0;
+font-size:30px;
+margin:  0;
 -webkit-text-stroke-width: 0.5px;
 -webkit-text-stroke-color: #fff;
 } 
@@ -235,29 +244,20 @@ margin: 30px  0;
     width: 280px;
     height: 350px;
     margin: 60px auto;
-    /*This is meant to centre the game board but to noavail */
     display: flex;
     flex-wrap: wrap;
-    /* flex has default property of "nowrap" */
     perspective: 1000px;
-    /* removed border */
+    
 }
 
 .memory-card {
     padding-bottom: 20px;
     width: calc(25% - 10px);
-    /* This makes it so theres four cards in a row and calc makes it so that the excess margin 
-          is  considered in the width */
     height: calc(33.333% - 10px);
-    /* This makes it so there's 3 rows */
     margin: 5px;
     position: relative;
-    /* When you set an elemment to positon relative nothimg will happen, but when you add apply position
-          attributes like top:10px or left:10px then the elemnt will position itself relative to its normal positon in flow e.g it will move 
-          20px right and 20px down from its normal position */
     transform: scale(1);
     transform-style: preserve-3d;
-    /* This + perspective property and transition:transform makes the card flip 3d */
     transition: transform .5s;
     border : solid 3px #000;
     border-radius: 5%;
@@ -265,31 +265,23 @@ margin: 30px  0;
 
 .memory-card:active {
     transform: scale(.97);
-    /* suedo class active makes it so that when an element is clicked trigger an animation
-          the element will become 3% smaller when clicked*/
     transition: transform .2s;
 
 }
 
 .memory-card.flip {
     transform: rotateY(180deg);
-    /*rotates image on y axis. as if you were turing a revolving door */
 }
 
 .front-face,
 .back-face {
     width: 100%;
-    /* This makes it so the imgs take on 100% of the container width */
     height: 100%;
-    /* This makes it so the imgs take on 100% of the container height */
     position: absolute;
-    /* When you add postion absolute  the element has to position its self relative to its nearest  ancestor 
-         if this cant be done then its positions itself relative to the body elemnent */
     border-radius: 5px;
-    background: #ffffff; /*commit*/
+    background: #ffffff;
     backface-visibility: hidden;
-    /*eaxh html element has a backface this must be set to hidden so when you flip a card
-            its backface isnt shown */
+   
 }
 
 .front-face {
@@ -310,13 +302,11 @@ media queries
     }
 
     .dashboard-box {
-        /*this is to fix positioning problems with the dashboard */
         margin:0 auto;
     }
 
 
     .timer-box {
-        /*this is to fix positioning problems with the timer box*/
         margin: auto;
     }
 }
@@ -324,7 +314,6 @@ media queries
 
 @media (min-width:375px) {
     .memory-game {
-        /*this is to fix positioning problems with the card box */
         width: 330px;
     }
 
@@ -359,12 +348,8 @@ media queries
 
 
 .dashboard-box {
-       
-       
-        height: 320px;
-
-       
-        -webkit-text-stroke-width: 0.5px;
+ height: 320px;
+-webkit-text-stroke-width: 0.5px;
 -webkit-text-stroke-color: #fff;
     }
 
@@ -416,7 +401,7 @@ font-size: 22px;
 
 
     .dashboard-box {
-        /*this is to fix positioning problems*/
+      
         width: 90%;
   
 
@@ -432,7 +417,7 @@ font-size: 22px;
 
 
    .rule_reset-box  {
-        /*this is to fix positioning problems*/
+       
         width: 90%;
        height: 15%;
     }
@@ -464,7 +449,7 @@ font-size: 40px;
     }
 
 
-/*modal styling */
+/* modal styling */
 
 .modal-content {
 width :800px;
@@ -510,25 +495,6 @@ position: relative;
     font-size:40px; 
 }
 
-.modal-how-to-play-container p {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 5px;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #fff;
-}
-
-
-/* For better readbility on tablet and desktop size */
-
-@media (min-width:768px) {
-.modal-how-to-play-container p {
-    font-size: px;
-   
-}
-
-
-}
 
 
 .win-modal-scores {
