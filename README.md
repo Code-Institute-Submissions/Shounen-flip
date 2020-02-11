@@ -2,7 +2,9 @@
 **Overview** – The game features a one page html document with css and javascript used to style and animate HTML elements on the page.
 
 
-### UX Design
+click to view [Shounen-flip](https://xxkaminaxx.github.io/Shounen-flip/)
+
+## UX Design
 ***
 ##### Developer goals
  
@@ -27,7 +29,7 @@
 
 
 
-#### Existing features
+## Existing features
 ***
 * The page features responsive traits. Its structure changes based on the screen size. 
 * Rank - The dashboard features a ranking system based on the time the player takes to complete the game. 
@@ -46,22 +48,22 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 * Adding local storage. so the user being able to save continue or reset their playthrough on the game. 
 * leaderboard.
 
-####  Technologies Used
+##  Technologies Used
 ***
 
-*	Cloud - I used Cloud9 as the IDE while developing the website. 
+*	Cloud9 - I used Cloud9 as the IDE while developing the website. 
 *	This project uses HTML and CSS for the structuring and styling. 
 *	BootstrapCDN - The project uses Bootstrap4  for easy structuring and to make the project responsive . 
 *	Google Fonts - The project uses Google fonts to style the website fonts.
 *	Javascript - The project uses Javascript to manipulate the game cards and create the game mechanics.
 
 
-#### Testing 
+## Testing 
 ***
 
  [click here](https://github.com/xxkaminaxx/Shounen-flip/blob/master/TESTING.md) to get to testing page. 
 
-#### Deployment
+## Deployment
 ***
 
 **When deploying my memory game from github, I followed these steps:**
@@ -87,16 +89,16 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 * I made some changes to the structure I initially designed in the wireframe during the development process. These changes were because i ran out of time and it would have taken too long to implement some features as i was unaware of how to use javascript at the time. So i focused on what little I knew and what i could learn quickly.  These features being adding "local storage" which i talk about in my "features left to implement" section.  
 * Another change I made to the structure was relocating the position of the turn counter. I did this so that visually it would be easier for the player to see there stats, so displaying Rank, Timer, and Turn counter stacked over each other in one place rather than having theses stats dispersed over the screen. 
 
-#### Credits -
+## Credits -
 ***
 
-###### Content -
+#### Content -
 * The font style for the text used for this site was taken from google fonts library 
 
-###### Media -
+#### Media -
 * The images used  are not mine they were taken from google images. 
 
-###### Acknowledgements
+#### Acknowledgements
 
 * I took inspiration from japanese anime I love to watch. 
 * i took inspiration from this game "fruit flip" [https://www.brain-games.co.uk/game/Fruit+Flip]()
