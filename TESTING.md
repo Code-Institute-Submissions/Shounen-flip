@@ -1,10 +1,14 @@
 # Testing
 ***
+
+I used this site to validate the different part of my app
+
 [W3C markup Validation service](https://validator.w3.org/) Results: "Document checking completed. No errors or warnings to show."
 
 [W3C CSS Validation service](https://jigsaw.w3.org/css-validator/) Results: "Congratulations! No Error Found."
 
-The webpages used to create this site were validated using W3C validators 
+[Esprima](https://esprima.org/demo/validate.html) Results: "Code is syntactically valid."
+
 
 ## **Part-1**  Testing client "user stories"
 
@@ -75,9 +79,23 @@ The app passed allthe responsive tests on the various screens sizes except for t
 
 I asked my friends and sister to test game no bugs were found. 
 
+## **Part-4** browser testing 
+I tested this app on several browsers such as :
+* Internet explorer | couldnt load unsupported CSS property.
+* Google chrome | Everything Good.
+* Firefox | Everything Good
 
+I found that 
+on internet explorer two properties didn't render on the page with the app. This is because this isn't supported on internet explorer.
+```
+ -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff;
 
-## **Part-4**   Bugs found 
+```
+
+ 
+
+## **Part-5**   Bugs found 
 
 I found a  bug when developing the game: 
 
