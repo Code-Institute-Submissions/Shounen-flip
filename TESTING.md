@@ -1,12 +1,12 @@
 # Testing
 ***
-[W3C markup Validation service](https://validator.w3.org/)
+[W3C markup Validation service](https://validator.w3.org/) Results: "Document checking completed. No errors or warnings to show."
 
-[W3C CSS Validation service](https://jigsaw.w3.org/css-validator/)
+[W3C CSS Validation service](https://jigsaw.w3.org/css-validator/) Results: "Congratulations! No Error Found."
 
 The webpages used to create this site were validated using W3C validators 
 
-##### **Part-1**  Testing client "user stories"
+## **Part-1**  Testing client "user stories"
 
 * As an external user I would like the controls to be easy so I can easily play the game. The controls are simple you literally have to click the face down cards to match them with each other. Any action excuted in this game  is done, more or less with one click . 
 
@@ -23,7 +23,7 @@ The webpages used to create this site were validated using W3C validators
 
 
 
-##### **Part-2**  Manual testing 
+## **Part-2**  Manual testing 
 **Game-board/ dashboard values**
 
 1) click one of the cards and see if they flip. 
@@ -47,18 +47,37 @@ The webpages used to create this site were validated using W3C validators
 3) click the close button on the win/lose modals to see if they close. 
 
 **Responsive tests** 
-1) check how the game looks on various screen sizes do this through " dev tools " make sure the page only scrolls vertically not horzontally. 
+1) check how the game looks on various screen sizes do this through " dev tools " make sure the page only scrolls vertically not horzontally.
+2) check Images are visible and aren't stretched. 
+3) check that the back to top button stil appears on smaller screen sizes. 
+4) check the text displays clearly and doesnt go off the screen. 
+5) check that the layout changes on mobile view. 
+6) check the modals fit on the page in mobile view.
+7) check the text is in the model and doesn't spill out side the modal box when on. 
+
+**Screen sizes** 
+
+* Galaxy 5 | 360x640 
+* Pixel 2  | 411 x 731
+* Iphone 5/SE | 320 x 568 
+* IPhone 6/7/8 | 375 x 667
+* IPhone 6/7/8 plus. | 414 x 736
+* IPad | 768 x 1024
+* IPad pro | 1024 x 1366
+
+**Rsponsive test Results:**
+
+The app passed allthe responsive tests on the various screens sizes except for the 7th one i found on the mobile view when I clicked the rules button to display the the "how to play modal" the text would go off the screen so I adjusted the size of text on that screen size. 
 
 
 
-
-##### **Part-3** Third party testing
+## **Part-3** Third party testing
 
 I asked my friends and sister to test game no bugs were found. 
 
 
 
-##### **Part-5**   Bugs found 
+## **Part-4**   Bugs found 
 
 I found a  bug when developing the game: 
 

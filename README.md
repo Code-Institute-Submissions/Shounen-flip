@@ -59,7 +59,7 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
 #### Testing 
 ***
 
- []() to get to testing page. 
+ [click here](https://github.com/xxkaminaxx/Shounen-flip/blob/master/TESTING.md) to get to testing page. 
 
 #### Deployment
 ***

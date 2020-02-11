@@ -213,15 +213,15 @@ font-size: 35px;
 .win-modal-scores {
 text-align: center; 
 font-size:20px;
-margin: 30px, 0;
+margin: 30px  0;
 -webkit-text-stroke-width: 0.5px;
 -webkit-text-stroke-color: #fff;
 } 
-/* commit*/
+
 .lose-modal {
     text-align: center; 
     font-size:20px;
-    margin: 30px, 0;
+    margin: 30px 0;
     } 
     
 
@@ -306,7 +306,7 @@ media queries
 
 @media (max-width:414px) {
     .title-box {
-        margin: aut;
+        margin: auto;
     }
 
     .dashboard-box {
@@ -317,7 +317,7 @@ media queries
 
     .timer-box {
         /*this is to fix positioning problems with the timer box*/
-        margin: aut;
+        margin: auto;
     }
 }
 
@@ -512,10 +512,22 @@ position: relative;
 
 .modal-how-to-play-container p {
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     margin-top: 5px;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #fff;
+}
+
+
+/* For better readbility on tablet and desktop size */
+
+@media (min-width:768px) {
+.modal-how-to-play-container p {
+    font-size: 30px;
+   
+}
+
+
 }
 
 
