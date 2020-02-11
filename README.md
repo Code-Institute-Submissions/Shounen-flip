@@ -108,6 +108,8 @@ The win modal displays the Rank, Time and number of turns the player takes. The 
  https://www.quora.com/How-can-I-change-the-color-of-inner-HTML-var-value-text-with-JavaScript
 
 ```
+ //changes display for timer . 
+        timer.innerHTML = "Time" + ":" + "<span style=\"color:#a90329\">" + convertTime(timeleft - timeCounter) + "</span>" ;
 
 
 ```
